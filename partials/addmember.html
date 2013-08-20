@@ -1,0 +1,14 @@
+<form ng-controller="AddMemberController">
+	First Name: <input type="text" ng-model="user.first_name" /> <br/>
+	Last Name: <input type="text" ng-model="user.last_name" /> <br/>
+
+	Position:
+	<select ng-model="user.position">
+			<option>Project Owner</option>
+			<option>Client stakeholder</option>
+			<option>Designer</option>
+			<option>Tester</option>
+			<option>Programmer</option>
+	</select> <br/>
+	<button ng-click="add( user )">SAVE</button>
+</form>
