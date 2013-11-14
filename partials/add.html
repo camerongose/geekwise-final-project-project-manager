@@ -1,0 +1,15 @@
+<form ng-controller="AddController">
+	Title: <input type="text" ng-model="project.title" /><br/>
+	Description: <input type="text" ng-model="project.description"/><br/>
+	Due Date: <input type="date"/><br/>
+	Team: <input type="text" ng-model="project.team"/><br/>
+	Progress: 
+	<select ng-model="project.status">
+		<option>Not Started</option>
+		<option>On track</option>
+		<option>Delayed</option>
+		<option>Completed</option>
+	</select> <br/>
+	<button ng-click="reset()">RESET</button>
+	<button ng-click="add( project );">SAVE</button>
+</form>

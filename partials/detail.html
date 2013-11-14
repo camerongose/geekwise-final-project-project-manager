@@ -1,0 +1,24 @@
+<h1>Project Details</h1>
+<h2>{{ project.title }}</h2>
+<p>Description: {{ project.description }}</p>
+<p>Due Date: {{ project.duedate }}</p>
+<p>Team: {{ project.team }}</p>
+<hr/>
+<h3>Comments</h3>
+<div>
+	<form>
+		Comment:<input type="text" ng-model="comment.message"/><br/>
+		Name:<input type="text" ng-model="comment.commenter"/><br/>
+		<button ng-click="add( comment )">Submit</button>
+	</form>
+</div>	
+<hr/>
+<li ng-repeat="comment in project.comments">
+	<ul>
+		{{ comment }} <br/><em>{{ project.commenters [$index] }}</em>
+	</ul>
+	<hr/>
+</li>
+
+
+

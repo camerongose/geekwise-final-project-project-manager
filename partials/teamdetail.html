@@ -1,0 +1,8 @@
+<h1>Team {{ team.name }} Details</h1>
+<ul  ng-repeat=" member in team.members">
+	<li>
+		<strong>{{ member }}</strong> - <em>{{ team.positions [$index] }}</em>
+	</li>
+</ul>
+
+[<a href="#/team/member/add/{{ getID(); }}">Add</a>]

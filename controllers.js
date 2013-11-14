@@ -57,14 +57,14 @@ projectManager.controller( 'AddController',
 			$scope.projects.push( project );
 			$location.path( "#/" );
 		}
-		//parameter should not be there
+		
 		$scope.reset = function( project ) {
 			$scope.project = '';
 		}
 	})
 projectManager.controller( 'DeleteController',
 	function DeleteController ( $scope, $routeParams ) {
-		//Not permanent, will look into that later
+		
 		$scope.projects.splice( $routeParams.id, 1 );
 		
 		
@@ -73,19 +73,26 @@ projectManager.controller( 'DetailController',
 	function DetailController ( $scope, $routeParams ) {
 		
 		$scope.project = $scope.projects[ $routeParams.id ];
+		$scope.add = function ( content ){
+			$scope.project.comments.push(content.message);
+			$scope.project.commenters.push(content.commenter);
+		}
 	})
 projectManager.controller( 'EditController',
 	function EditController ( $scope, $routeParams, $location ) {
 		
 		$scope.project = $scope.projects[ $routeParams.id ];
+		$scope.temp = angular.copy($scope.projects[ $routeParams.id ]);
 		
 		$scope.update = function( project ) {
 			$scope.projects[ $routeParams.id ] = project;
 			$location.path( "#/" );
 		}
+
 		$scope.reset = function() {
-			$scope.project = '';
+			$scope.projects[ $routeParams.id ] = $scope.temp;
 		}
+		$scope.projects[ $routeParams.id ] = $scope.temp;
 	})
 projectManager.controller( 'TeamDetailController' ,
 	function TeamDetailController ($scope, $routeParams ) {
@@ -110,7 +117,7 @@ projectManager.controller( 'AddMemberController',
 	function AddTeamMember ($scope, $routeParams, $location) {
 		var id = $routeParams.id;
 		console.log( $routeParams.id );
-		console.log( "something should be before this" );
+		console.log( "number should be before this" );
 		$scope.add = function( member ) {
 			console.log( member.position );
 			$scope.teams[id].members.push( member.first_name + " " + member.last_name);

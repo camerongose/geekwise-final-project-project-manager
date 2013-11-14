@@ -1,0 +1,17 @@
+{
+	"projects": [ {
+
+			"title" : "My First Project",
+			"description":"A fun and easy way to record your meals!",
+			"duedate": "09-01-2013",
+			"team": "the Frozen Yogurts",
+			"status": "On Track",
+			"comments": ["Making good progress", "Running into some trouble", "Passed it!!"],
+			"commenters":["Cameron", "Cameron", "Cameron"]
+	}],
+	"teams" : [{
+			"name": "Awesome",
+			"members": ["Cameron", "Corey", "Jeff"],
+			"positions": ["Programmer", "Designer", "Project Owner"]
+	}]
+}

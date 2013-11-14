@@ -1,0 +1,9 @@
+<form ng-controller="EditController">
+	Title: <input type="text" ng-model="project.title" /><br/>
+	Description: <input type="text" ng-model="project.description"/><br/>
+	Due Date: <input type="date" ng-model="project.duedate"/><br/>
+	Team: <input type="text" ng-model="project.team"/><br/>
+
+	<button ng-click="reset( project )">RESET</button>
+	<button ng-click="update( project )">UPDATE</button>
+</form>

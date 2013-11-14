@@ -1,0 +1,15 @@
+
+<h2>Projects</h2>
+<li ng-repeat="project in projects">
+	<ul><a href='#/detail/{{ $index }}'>{{ project.title }}</a>
+		[<a href='#/edit/{{ $index }}'>Edit</a>]
+		[<a href='#/delete/{{ $index }}'>Delete</a>]
+	</ul>
+</li>
+[<a href="#/add">Add</a>]
+
+<h2>Teams</h2>
+<li ng-repeat="team in teams">
+	<ul><a href="#/team/detail/{{ $index }}">{{ team.name }}</a></ul>
+</li>
+[<a href="#/team/add">Add</a>]

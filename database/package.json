@@ -1,0 +1,15 @@
+{
+    "name": "geekwise.psb",
+    "version": "0.1.0",
+    "description": "a localstorage database layer that mocks as a server database",
+    "main": "Gruntfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "seth<Seth Thomas>@decipherinc.com",
+    "license": "BSD",
+    "devDependencies": {
+        "grunt": "~0.4.0",
+        "grunt-contrib": "~0.6.0"
+    }
+}
